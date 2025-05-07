@@ -1,15 +1,15 @@
 # 📄 Advanced Network Packet Sniffer - README
-COMPANY: CODEC TECHNOLOGIES INDIA
+**COMPANY:** CODEC TECHNOLOGIES INDIA
 
-NAME: KUSHAL KUMAWAT
+**NAME:** KUSHAL KUMAWAT
 
-NCS ID: E19E86-0116588287923
+**NCS ID:** E19E86-0116588287923
 
-DOMAIN: Cyber Security Intern
+**DOMAIN:** Cyber Security Intern
 
-DURATION: 3 Months
+**DURATION:** 3 Months
 
-MENTOR: Miss.Vaishali
+**MENTOR:** Miss.Vaishali
 
 ---
 
