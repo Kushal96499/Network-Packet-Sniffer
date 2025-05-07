@@ -129,8 +129,8 @@ This project is open-source and free to use for educational purposes.
 ## 📧 Contact:
 
 * Name: Kushal Kumawat
-* Email: \[[your-email@example.com](mailto:your-email@example.com)]
-* GitHub: \[your-github-link]
+* Email: \[[tanchukumawat@gmail.com](mailto:your-email@example.com)]
+* Linkedin: \[wwww.linkedin.com/in/kushal-ku]
 
 ---
 
