@@ -1,112 +1,140 @@
-# 🛡️ Advanced Intrusion Detection System (IDS)
+# 📄 Advanced Network Packet Sniffer - README
 
-A real-time network monitoring and intrusion detection system built with Python and Scapy. This project detects suspicious activities like SYN floods, port scans, DNS spoofing, and ping of death attacks. Designed to be user-friendly, colorful, and informative — perfect for educational, internship, and research purposes.
+## 🛡️ Project Title:
 
----
+**Advanced Network Packet Sniffer**
 
-## 📌 Project Overview
+## 👨‍💻 Developed by:
 
-This project was developed as part of my internship at **CodTech Interns (2025)**. The goal was to create a feature-rich and user-friendly Intrusion Detection System that can help detect common network-based attacks in real time and log those alerts for further analysis.
+**Kushal Kumawat**
 
----
+## 🎯 Objective:
 
-## ✨ Features
-
-- ✅ Real-time packet sniffing and analysis
-- 🔍 Detection of:
-  - SYN Flood Attacks
-  - Port Scanning
-  - Ping of Death
-  - DNS Spoofing
-- 🎨 Color-coded terminal alerts using `colorama`
-- 📂 CSV and Log file export for alerts
-- 📡 Built using Scapy for powerful packet inspection
-- 🧠 Clean and well-commented Python code
-- 📛 Cool ASCII banner with developer details
-- 🧘 Graceful shutdown with Ctrl+C and automatic export
+To create a colorful, real-time, user-friendly packet sniffer using Python that captures and analyzes TCP, UDP, and ICMP packets on Kali Linux.
 
 ---
 
-## 🚀 Technologies Used
+## 🚀 Features:
 
-- Python 3.x
-- [Scapy](https://scapy.net/) – for packet sniffing and manipulation
-- [Colorama](https://pypi.org/project/colorama/) – for colorful terminal outputs
-- CSV & Logging Modules – to handle alert exports and logs
+* Real-time packet sniffing
+* Protocol detection: TCP, UDP, ICMP
+* Color-coded output using `rich`
+* Timestamps on each packet
+* Stylish ASCII banner
+* Works on Kali Linux (root access required)
 
 ---
 
-## 📁 File Structure
+## 🛠️ Requirements:
 
-```bash
-Advanced-Intrusion-Detection-System/
-├── advanced_ids.py          # Main IDS script
-├── ids_alerts.csv           # (Generated) Alert data in CSV format
-├── ids_alerts.log           # (Generated) Log file with timestamps
-├── README.md                # Project documentation
-└── Report.pdf               # Internship report for submission
+* OS: Kali Linux
+* Python 3
+* Python Libraries:
+
+  ```bash
+  sudo apt update
+  sudo apt install python3-pip
+  pip3 install scapy rich
+  ```
+
+---
+
+## 📁 File Structure:
+
+```
+advanced_packet_sniffer/
+├── sniffer.py             # Main Python script
+├── README.md              # Project documentation
+├── packet_capture_logs/   # (Optional) To store logs
 ```
 
 ---
 
-⚙️ Setup Instructions
-🔧 Requirements
-Install the necessary Python packages:
-```bash
-sudo apt update
-sudo apt install python3-pip
-pip3 install scapy colorama
-```
-📌 Note: This script requires root privileges to sniff packets.
+## 🧪 How to Run:
+
+1. Open a terminal in Kali Linux.
+2. Run the script with root access:
+
+   ```bash
+   sudo python3 sniffer.py
+   ```
 
 ---
 
-🏃‍♂️ How to Run (on Kali Linux or any Linux)
-Clone or download the project folder.
+## 🧪 How to Test:
 
-Run the IDS with sudo:
+Open another terminal and use these examples to generate traffic:
+
+### ICMP Test:
+
 ```bash
-sudo python3 advanced_ids.py
+ping -c 4 google.com
 ```
-To stop the monitoring, press Ctrl + C. This will:
 
-Save alerts to ids_alerts.csv
+### TCP Test:
 
-Log data to ids_alerts.log
+```bash
+curl http://example.com
+```
+
+### Local TCP Connection:
+
+```bash
+# Terminal A:
+nc -lvp 1234
+
+# Terminal B:
+nc 127.0.0.1 1234
+```
 
 ---
 
-🧪 How to Test
-Open a new terminal and simulate common attacks using:
+## 💡 Advanced Tips:
 
-📍 SYN Scan (Nmap):
-```bash
-nmap -sS <your_kali_ip>
-```
-📍 Ping of Death:
-```bash
-ping -s 1500 <your_kali_ip>
-```
-📍 Port Scan:
-```bash
-nmap -sF -T4 <your_kali_ip>
-```
-📍 DNS Spoof Test:
-Use a tool like ettercap or custom Scapy spoofing script to simulate.
+* Filter by protocol:
+
+  ```python
+  sniff(prn=packet_handler, store=0, filter="tcp")
+  ```
+* Capture on specific interface:
+
+  ```python
+  sniff(prn=packet_handler, store=0, iface="eth0")
+  ```
 
 ---
 
-📈 Output
+## 🔐 Important Notes:
 
-
----
-
-📜 License
-This project is for educational use only. You are free to modify and extend it under the MIT License.
+* Run the script as root (`sudo`) to capture packets.
+* This script is for educational and ethical use only.
 
 ---
 
-👨‍💻 Developed By
-Kushal Kumawat
-Intern at CodTech Interns (2025)
-🔐 Focus Area: Cybersecurity & Network Defense
+## 📝 Output Example:
+
+```
+16:42:03 | ICMP | 192.168.0.5:- -> 142.250.193.206:-
+16:42:04 | TCP  | 192.168.0.5:47230 -> 93.184.216.34:80
+```
+
+---
+
+## 📜 License:
+
+This project is open-source and free to use for educational purposes.
+
+---
+
+## 📧 Contact:
+
+* Name: Kushal Kumawat
+* Email: \[[your-email@example.com](mailto:your-email@example.com)]
+* GitHub: \[your-github-link]
+
+---
+
+## 🎓 Acknowledgements:
+
+* Built using [Scapy](https://scapy.net/) and [Rich](https://rich.readthedocs.io/en/stable/)
+* Inspired by real-world cybersecurity tools
