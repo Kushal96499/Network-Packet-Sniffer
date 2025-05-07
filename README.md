@@ -143,7 +143,7 @@ This project is open-source and free to use for educational purposes.
 
 * Name: Kushal Kumawat
 * Email: \[[tanchukumawat@gmail.com](mailto:your-email@example.com)]
-* Linkedin: \[[wwww.linkedin.com/in/kushal-ku]]
+* Linkedin: \wwww.linkedin.com/in/kushal-ku
 
 ---
 
