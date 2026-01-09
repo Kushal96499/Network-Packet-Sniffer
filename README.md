@@ -1,18 +1,3 @@
-# 📄 Advanced Network Packet Sniffer - README
-**COMPANY:** CODEC TECHNOLOGIES INDIA
-
-**NAME:** KUSHAL KUMAWAT
-
-**NCS ID:** E19E86-0116588287923
-
-**DOMAIN:** Cyber Security Intern
-
-**DURATION:** 3 Months
-
-**MENTOR:** Miss.Vaishali
-
----
-
 ## 🛡️ Project Title:
 
 **Advanced Network Packet Sniffer**
@@ -151,3 +136,4 @@ This project is open-source and free to use for educational purposes.
 
 * Built using [Scapy](https://scapy.net/) and [Rich](https://rich.readthedocs.io/en/stable/)
 * Inspired by real-world cybersecurity tools
+
